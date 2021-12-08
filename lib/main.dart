@@ -67,9 +67,12 @@ class MyHomePage extends StatelessWidget {
               elevation: 3,
             ),
           ),
-          Card(
-            color: Colors.redAccent,
-            child: Text('Hier kommen die Transaktionen hin.'),
+          Column(
+            children: transactions.map((e) {
+              return Card(
+                child: Text(e.title),
+              );
+            }).toList(),
           ),
         ],
       ),
