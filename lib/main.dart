@@ -26,6 +26,8 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.greenAccent,
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
             width: double.infinity,
@@ -36,7 +38,8 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           Card(
-            child: Text('Hier kommt der Chart hin.'),
+            color: Colors.redAccent,
+            child: Text('Hier kommen die Transaktionen hin.'),
           ),
         ],
       ),
