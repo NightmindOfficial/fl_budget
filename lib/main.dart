@@ -57,7 +57,7 @@ class MyHomePage extends StatelessWidget {
         backgroundColor: Colors.greenAccent,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
@@ -65,6 +65,30 @@ class MyHomePage extends StatelessWidget {
               color: Colors.greenAccent,
               child: Text('Hier kommt der Chart hin.'),
               elevation: 3,
+            ),
+          ),
+          Card(
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                children: <Widget>[
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      //TODO: Button implementieren
+                    },
+                    child: Text('Add Transaction'),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.lightGreen,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           Column(
