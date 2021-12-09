@@ -60,7 +60,6 @@ class MyHomePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
-            width: double.infinity,
             child: Card(
               color: Colors.greenAccent,
               child: Text('Hier kommt der Chart hin.'),
