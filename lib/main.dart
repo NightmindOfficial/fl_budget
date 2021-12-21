@@ -25,6 +25,12 @@ class MyHomePage extends StatelessWidget {
             color: Colors.black87,
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.add),
+          ),
+        ],
         backgroundColor: Colors.greenAccent,
       ),
       body: SingleChildScrollView(
@@ -42,6 +48,12 @@ class MyHomePage extends StatelessWidget {
             UserTransactions(),
           ],
         ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Colors.lightGreen,
       ),
     );
   }
