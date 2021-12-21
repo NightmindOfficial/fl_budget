@@ -1,4 +1,4 @@
-import 'package:fl_budget/widgets/user_transactions.dart';
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
 class NewTransaction extends StatelessWidget {

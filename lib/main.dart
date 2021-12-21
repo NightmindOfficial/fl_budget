@@ -27,19 +27,21 @@ class MyHomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.greenAccent,
       ),
-      body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Container(
-            child: Card(
-              color: Colors.greenAccent,
-              child: Text('Hier kommt der Chart hin.'),
-              elevation: 3,
+      body: SingleChildScrollView(
+        child: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Container(
+              child: Card(
+                color: Colors.greenAccent,
+                child: Text('Hier kommt der Chart hin.'),
+                elevation: 3,
+              ),
             ),
-          ),
-          UserTransactions(),
-        ],
+            UserTransactions(),
+          ],
+        ),
       ),
     );
   }

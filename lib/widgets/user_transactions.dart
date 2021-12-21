@@ -40,7 +40,7 @@ class _UserTransactionsState extends State<UserTransactions> {
 
   void _addNewTransactionToList(
       String transactionTitle, double transactionAmount) {
-    final TBATransaction = Transaction(
+    final tBATransaction = Transaction(
       title: transactionTitle,
       amount: transactionAmount,
       date: DateTime.now(),
@@ -48,7 +48,7 @@ class _UserTransactionsState extends State<UserTransactions> {
     );
 
     setState(() {
-      _userTransactions.add(TBATransaction);
+      _userTransactions.add(tBATransaction);
     });
   }
 
