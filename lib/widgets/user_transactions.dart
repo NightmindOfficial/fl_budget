@@ -38,12 +38,24 @@ class _UserTransactionsState extends State<UserTransactions> {
     ),
   ];
 
+  void _addNewTransactionToList(
+      String transactionTitle, double transactionAmount) {
+    final TBATransaction = Transaction(
+      title: transactionTitle,
+      amount: transactionAmount,
+      date: DateTime.now(),
+      id: DateTime.now().toString(),
+    );
+
+    _userTransactions.add(TBATransaction);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         NewTransaction(),
-        TransactionList(),
+        TransactionList(_userTransactions),
       ],
     );
   }

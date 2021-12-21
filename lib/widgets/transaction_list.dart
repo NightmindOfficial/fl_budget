@@ -1,39 +1,17 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import '../models/transaction.dart';
+import 'package:intl/intl.dart';
 
 class TransactionList extends StatelessWidget {
-  final List<Transaction> _userTransactions = [
-    Transaction(
-      id: 't1',
-      title: 'Neue Schuhe',
-      amount: 69.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't2',
-      title: 'Latte',
-      amount: 4.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't3',
-      title: 'Netflix Subscription',
-      amount: 12.99,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 't4',
-      title: 'Otis\' OnlyFans Subscription',
-      amount: 4.20,
-      date: DateTime.now(),
-    ),
-  ];
+  final List<Transaction> transactions;
+
+  TransactionList(this.transactions);
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: _userTransactions.map((e) {
+      children: transactions.map((e) {
         return Card(
           child: Row(
             children: <Widget>[

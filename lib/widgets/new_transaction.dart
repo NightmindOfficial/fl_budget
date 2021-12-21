@@ -28,7 +28,7 @@ class NewTransaction extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                print(titleController.text + ": " + amountController.text);
+                // TODO Video 84
               },
               child: Text('Add Transaction'),
               style: ElevatedButton.styleFrom(
