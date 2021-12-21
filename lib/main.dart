@@ -8,11 +8,17 @@ import 'models/transaction.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  var colorSwatch = Colors.green;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter App',
+      title: 'Personal Expenses',
       home: MyHomePage(),
+      theme: ThemeData(
+        primarySwatch: colorSwatch,
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: colorSwatch),
+      ),
     );
   }
 }
@@ -81,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Budgeting App',
+          'Personal Expenses',
           style: TextStyle(
             color: Colors.black87,
           ),
@@ -92,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.add),
           ),
         ],
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Theme.of(context).primaryColor,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -101,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Container(
               child: Card(
-                color: Colors.greenAccent,
+                color: Theme.of(context).primaryColor,
                 child: Text('Hier kommt der Chart hin.'),
                 elevation: 3,
               ),
@@ -114,7 +120,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () => _startAddNewTransaction(context),
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightGreen,
+        backgroundColor: Theme.of(context).colorScheme.secondary,
       ),
     );
   }
