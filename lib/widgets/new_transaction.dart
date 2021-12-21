@@ -1,10 +1,18 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
-class NewTransaction extends StatelessWidget {
+class NewTransaction extends StatefulWidget {
+  final Function addTransactionToList;
+  NewTransaction(this.addTransactionToList, {Key? key}) : super(key: key);
+
+  @override
+  State<NewTransaction> createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
   // late String titleInput;
-  // late String amountInput;
   final titleController = TextEditingController();
+
   final amountController = TextEditingController();
 
   void addTransactionCallFct() {
@@ -15,14 +23,13 @@ class NewTransaction extends StatelessWidget {
       return;
     }
 
-    addTransactionToList(
+    widget.addTransactionToList(
       titleController.text,
       double.parse(amountController.text),
     );
-  }
 
-  final Function addTransactionToList;
-  NewTransaction(this.addTransactionToList, {Key? key}) : super(key: key);
+    Navigator.of(context).pop();
+  }
 
   @override
   Widget build(BuildContext context) {
