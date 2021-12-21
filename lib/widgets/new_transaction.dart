@@ -1,12 +1,14 @@
+import 'package:fl_budget/widgets/user_transactions.dart';
 import 'package:flutter/material.dart';
 
 class NewTransaction extends StatelessWidget {
-  NewTransaction({Key? key}) : super(key: key);
-
   // late String titleInput;
   // late String amountInput;
   final titleController = TextEditingController();
   final amountController = TextEditingController();
+
+  final Function addTransactionToList;
+  NewTransaction(this.addTransactionToList, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,10 @@ class NewTransaction extends StatelessWidget {
             ),
             ElevatedButton(
               onPressed: () {
-                // TODO Video 84
+                addTransactionToList(
+                  titleController.text,
+                  double.parse(amountController.text),
+                );
               },
               child: Text('Add Transaction'),
               style: ElevatedButton.styleFrom(
