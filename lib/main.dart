@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:fl_budget/transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -71,6 +72,7 @@ class MyHomePage extends StatelessWidget {
             child: Container(
               padding: EdgeInsets.all(10),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: <Widget>[
                   TextField(
                     decoration: InputDecoration(labelText: 'Title'),
